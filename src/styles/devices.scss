@@ -1,0 +1,68 @@
+@import "variables.scss";
+
+.devices {
+    @include image-bg("/src/image/devices-bg.png", 0.8, $white);
+    margin-top: 42px;
+
+    @include tablet {
+        margin-top: 28.48px;
+    }
+    @include mobile {
+        margin-top: 43.18px;
+    }
+    &__title-wrapper {
+        margin-bottom: 59px;
+        @include tablet {
+            margin-bottom: 39.95px;
+        }
+        @include mobile {
+            margin-bottom: 36.64px;
+        }
+    }
+    &__wrapper-image {
+        position: relative;
+        max-width: 1170px;
+        padding-bottom: 57px;
+        @include tablet {
+            padding-bottom: 38.65px;
+        }
+        @include mobile {
+            width: 100%;
+            padding-bottom: 25px;
+        }
+    }
+    &__tablet-img {
+        aspect-ratio: 659/494;
+        max-width: 659px;
+        width: 56.3%;
+        margin: 0 auto;
+        @include mobile {
+            aspect-ratio: 286/219;
+            width: 100%;
+        }
+        & img {
+            @include image-cover;
+        }
+    }
+    &__mobile-img {
+        max-width: 199.89px;
+        width: 17%;
+        aspect-ratio: 199.89/411.66;
+        position: absolute;
+        bottom: -7.9%;
+        right: 17.1%;
+        z-index: 10;
+        @include tablet {
+        }
+        @include mobile {
+            aspect-ratio: 85.12/175.31;
+            min-width: 85.12px;
+            width: 29%;
+            bottom: -13.9%;
+            right: 10%;
+        }
+        & img {
+            @include image-cover;
+        }
+    }
+}

@@ -1,3 +1,4 @@
+@import "bootstrap/scss/bootstrap";
 @import "variables.scss";
 
 * {
@@ -20,29 +21,14 @@ button{
     cursor: pointer;
 }
 .wrapper-bg {
-    background: url(/src/image/banner_bg.png);
-    position: relative;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: $gradient;
-        opacity: $opacity;
-        z-index: 2;
-    }
+    @include image-bg("/src/image/banner_bg.png", 0.9, $gradient);
 }
 .container {
     max-width: 1202px;
     width: 100%;
     margin: 0 auto;
     position: relative;
-    z-index: 3;
+    z-index: 5;
     padding: 0 16px
 }
 .line {

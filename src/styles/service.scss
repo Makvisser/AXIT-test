@@ -1,0 +1,40 @@
+@import "variables.scss";
+
+.service {
+    &__title-wrapper {
+    }
+    &__text {
+    }
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    &__photo {
+
+        & img{
+            
+        }
+    }
+}
+.accordion {
+    &-item {
+    }
+    &-header {
+    }
+    &-button {
+    }
+    &-collapse {
+    }
+    &-body {
+    }
+}
+.collapse {
+}
+.show {
+}
+
+@include tablet {
+}
+@include mobile {
+}

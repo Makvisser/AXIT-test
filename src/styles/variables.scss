@@ -7,7 +7,7 @@ $grey: #a9afb1;
 $light-grey: #c6cbcd;
 $bg-grey: #f8f8f8;
 $orange: #f4bf87;
-$eggshell:#F9EFCF;
+$eggshell: #f9efcf;
 
 $gradient: linear-gradient(to bottom, #f38281 0%, #f4bf87 100%);
 $opacity: 0.9;
@@ -41,4 +41,23 @@ $breakpoint-mobile: 768px;
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+@mixin image-bg($url, $opacity, $color-bg) {
+    background: url($url);
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $color-bg;
+        opacity: $opacity;
+        z-index: 2;
+    }
 }

@@ -9,6 +9,9 @@
         <link rel="stylesheet" href="/src/styles/banner.scss" />
         <link rel="stylesheet" href="/src/styles/about.scss" />
         <link rel="stylesheet" href="/src/styles/futures.scss" />
+        <link rel="stylesheet" href="/src/styles/services.scss" />
+        <link rel="stylesheet" href="/src/styles/devices.scss" />
+        <link rel="stylesheet" href="/src/styles/service.scss" />
         <link rel="stylesheet" href="/src/styles/partners.scss" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -348,11 +351,21 @@
         <section class="futures">
             <div class="container">
                 <div class="futures__wrapper">
-                    <p class="futures__item"><span>42</span><br>Lorem ipsum</p>
-                    <p class="futures__item"><span>123</span><br>Lorem ipsum</p>
-                    <p class="futures__item"><span>15</span><br>Lorem ipsum</p>
-                    <p class="futures__item"><span>99</span><br>Lorem ipsum</p>
-                    <p class="futures__item"><span>24</span><br>Lorem ipsum</p>
+                    <div class="futures__item">
+                        <span>42</span><br />Lorem ipsum
+                    </div>
+                    <div class="futures__item">
+                        <span>123</span><br />Lorem ipsum
+                    </div>
+                    <div class="futures__item">
+                        <span>15</span><br />Lorem ipsum
+                    </div>
+                    <div class="futures__item">
+                        <span>99</span><br />Lorem ipsum
+                    </div>
+                    <div class="futures__item">
+                        <span>24</span><br />Lorem ipsum
+                    </div>
                 </div>
             </div>
         </section>
@@ -573,31 +586,127 @@
                 </div>
             </div>
         </section>
-        <section class="devices"></section>
-        <section class="partners">
+        <section class="devices">
             <div class="container">
-                <div class="partners__wrapper">
-                    <div class="partners__img">
-                        <img src="/src/image/partners_icon1.svg" alt="partner-logo">
+                <div class="devices__title-wrapper title-wrapper">
+                    <h5 class="accent-title">For all devices</h5>
+                    <h4 class="title">unique design</h4>
+                    <div class="line"></div>
+                </div>
+                <div class="devices__wrapper-image">
+                    <div class="devices__tablet-img">
+                        <img src="/src/image/tablet.png" alt="tablet" />
                     </div>
-                    <div class="partners__img">
-                        <img src="/src/image/partners_icon2.svg" alt="partner-logo">
-                    </div>
-                    <div class="partners__img">
-                        <img src="/src/image/partners_icon3.svg" alt="partner-logo">
-                    </div>
-                    <div class="partners__img">
-                        <img src="/src/image/partners_icon4.svg" alt="partner-logo">
-                    </div>
-                    <div class="partners__img">
-                        <img src="/src/image/partners_icon5.svg" alt="partner-logo">
-                    </div>
-                    <div class="partners__img">
-                        <img src="/src/image/partners_icon6.svg" alt="partner-logo">
+                    <div class="devices__mobile-img">
+                        <img src="/src/image/mobile.png" alt="mobile" />
                     </div>
                 </div>
             </div>
         </section>
-        <script src="/src/js.js"></script>
+        <section class="service">
+            <div class="container">
+                <div class="service__title-wrapper title-wrapper">
+                    <h5 class="accent-title">Service</h5>
+                    <h4 class="title">what we do</h4>
+                    <div class="line"></div>
+                </div>
+                <p class="service__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu
+                    facilisis sed venenatis lacus. Eget sit ridiculus facilisi
+                    amet. Dis sapien ipsum enim dui fermentum viverra dolor sit.
+                    Aliquet congue sit fermentum risus feugiat.
+                </p>
+                <div class="service__content">
+                    <div class="service__photo">
+                        <img src="/src/image/service_image.png" alt="servive" />
+                    </div>
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne"
+                                    aria-expanded="true"
+                                    aria-controls="collapseOne"
+                                >
+                                    photography
+                                </button>
+                            </h2>
+                            <div
+                                id="collapseOne"
+                                class="accordion-collapse collapse show"
+                                data-bs-parent="#accordionExample"
+                            >
+                                <div class="accordion-body">
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Eros, nunc, rhoncus, id
+                                    tincidunt tellus rhoncus ornare. Amet, et
+                                    elementum enim mattis. Purus volutpat
+                                    sagittis ut adipiscing congue euismod sit
+                                    enim fringilla. Proin viverra nibh in vel ut
+                                    pulvinar nec senectus. Justo, id ac
+                                    facilisis fringilla fermentum sed nunc
+                                    aenean.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="partners">
+            <div class="container">
+                <div class="partners__wrapper">
+                    <div class="partners__img">
+                        <img
+                            src="/src/image/partners_icon1.svg"
+                            alt="partner-logo"
+                        />
+                    </div>
+                    <div class="partners__img">
+                        <img
+                            src="/src/image/partners_icon2.svg"
+                            alt="partner-logo"
+                        />
+                    </div>
+                    <div class="partners__img">
+                        <img
+                            src="/src/image/partners_icon3.svg"
+                            alt="partner-logo"
+                        />
+                    </div>
+                    <div class="partners__img">
+                        <img
+                            src="/src/image/partners_icon4.svg"
+                            alt="partner-logo"
+                        />
+                    </div>
+                    <div class="partners__img">
+                        <img
+                            src="/src/image/partners_icon5.svg"
+                            alt="partner-logo"
+                        />
+                    </div>
+                    <div class="partners__img">
+                        <img
+                            src="/src/image/partners_icon6.svg"
+                            alt="partner-logo"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <button class="btn btn-primary">Primary button</button>
+
+        <div class="services__title-wrapper title-wrapper">
+            <h5 class="accent-title">What we do</h5>
+            <h4 class="title">story about us</h4>
+            <div class="line"></div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="/src/js.js" type="module"></script>
     </body>
 </html>

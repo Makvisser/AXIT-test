@@ -4,6 +4,7 @@
     background: $skyblue;
     color: $white;
     text-align: center;
+    margin-bottom: 42px;
     &__wrapper {
         display: grid;
         grid-template-columns: repeat(5, 1fr);

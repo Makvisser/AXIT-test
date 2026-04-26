@@ -1,0 +1,81 @@
+@import "variables.scss";
+
+.services {
+    color: $dark-grey;
+    margin-bottom: 91px;
+    @include tablet {
+        margin-bottom: 58.15px;
+    }
+    @include mobile {
+        margin-bottom: 58px;
+    }
+
+    &__title-wrapper {
+        margin-bottom: 80px;
+        @include tablet {
+            margin-bottom: 67.68px;
+        }
+        @include mobile {
+            margin-bottom: 66.15px;
+        }
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 30px;
+        row-gap: 140px;
+        @include tablet {
+            column-gap: 25.5px;
+            row-gap: 58.15px;
+        }
+        @include mobile {
+            grid-template-columns: 1fr;
+            gap: 36px;
+        }
+    }
+    &__item {
+        display: flex;
+        gap: 30px;
+        @include tablet {
+            gap: 25.44px;
+        }
+        @include mobile {
+            gap: 20px;
+            justify-content: center;
+        }
+        &-icon {
+            width: 70px;
+            height: 70px;
+            @include tablet {
+                width: 59.35px;
+                height: 59.35px;
+            }
+            @include mobile {
+                width: 57px;
+                height: 57px;
+            }
+        }
+        &-title {
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 24px;
+            line-height: 28px;
+            @include tablet {
+                font-size: 18px;
+                line-height: 21px;
+            }
+        }
+        &-text {
+            font-size: 18px;
+            padding: 21px 0;
+            @include tablet {
+                font-size: 18px;
+                padding: 19.915px 0;
+            }
+            @include mobile {
+                padding: 6.5px 0;
+            }
+        }
+    }
+}
