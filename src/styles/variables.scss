@@ -1,0 +1,44 @@
+$skyblue: #95e1d3;
+$pink: #f38281;
+$white: white;
+$black: black;
+$dark-grey: #2d3033;
+$grey: #a9afb1;
+$light-grey: #c6cbcd;
+$bg-grey: #f8f8f8;
+$orange: #f4bf87;
+$eggshell:#F9EFCF;
+
+$gradient: linear-gradient(to bottom, #f38281 0%, #f4bf87 100%);
+$opacity: 0.9;
+
+$accent-font: "Kaushan Script", cursive;
+$title-font: "Montserrat", sans-serif;
+$main-font: "Raleway", sans-serif;
+
+$breakpoint-desktop: 1070px;
+$breakpoint-tablet: 1024px;
+$breakpoint-mobile: 768px;
+
+@mixin tablet {
+    @media (max-width: #{$breakpoint-tablet}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: #{$breakpoint-mobile}) {
+        @content;
+    }
+}
+
+@include tablet {
+}
+@include mobile {
+}
+
+@mixin image-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

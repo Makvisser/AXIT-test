@@ -1,0 +1,203 @@
+@import "variables.scss";
+
+.header {
+    background: transparent;
+    margin-bottom: 77px;
+
+    @include tablet {
+        margin-bottom: 52.03px;
+    }
+    @include mobile {
+        margin-bottom: 34px;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {
+        width: 97.64px;
+        height: 26.1px;
+        margin: 42px 0 31.9px;
+        position: relative;
+        left: -4px;
+        // & svg{
+        //     @include image-cover;
+        // }
+        @include tablet {
+            width: 66.22px;
+            height: 17.7px;
+            margin: 28.48px 0 21.63px;
+            position: relative;
+            left: -4px;
+        }
+        @include mobile {
+            width: 54.25px;
+            height: 14.5px;
+            margin: 23.33px 0 18.17px;
+            position: relative;
+            left: -4px;
+        }
+        &-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 670px;
+        font-size: 14px;
+        font-weight: 600;
+        @include tablet {
+            font-size: 13px;
+        }
+        @include mobile {
+            display: none;
+        }
+        &-item {
+            text-align: center;
+            text-transform: uppercase;
+            width: 114px;
+            @include tablet {
+                width: 94px;
+            }
+            @include mobile {
+                z-index: 50;
+            }
+        }
+        &-cart,
+        &-search {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include tablet {
+                width: 16.28px;
+                height: 16.28px;
+            }
+            @include mobile {
+                display: none;
+            }
+
+            &:hover svg {
+                fill: $orange;
+                transition: fill 0.3s ease;
+            }
+        }
+        &-cart {
+            margin: 0 35px 0 17px;
+            @include tablet {
+                margin: 0 23.74px 0 28.43px;
+            }
+        }
+        &-search {
+            margin: 0;
+            padding-top: 2px;
+            @include tablet {
+                padding-top: 0px;
+            }
+            @include mobile {
+            }
+        }
+        &-link {
+            &-icon {
+                margin-top: auto;
+            }
+            &--active {
+                color: $orange;
+                position: relative;
+            }
+            &--active::after {
+                content: "";
+                position: absolute;
+                bottom: -6px;
+                left: 50%;
+                transform: translate(-50%);
+                width: 85px;
+                height: 1px;
+                background-color: $orange;
+                @include tablet {
+                }
+                @include mobile {
+                }
+            }
+        }
+    }
+}
+.burger-checkbox,
+.burger-button {
+    display: none;
+}
+@include mobile {
+    .burger-menu {
+        width: 24px;
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    .burger-button {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 4.5px;
+        position: relative;
+    }
+    .burger-button span,
+    .burger-button::before,
+    .burger-button::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        transition: all 0.2s;
+    }
+    .burger-checkbox:checked + .burger-button::before {
+        transform: rotate(-45deg);
+        top: 0;
+        position: absolute;
+    }
+    .burger-checkbox:checked + .burger-button::after {
+        transform: rotate(45deg);
+        bottom: 0;
+        position: absolute;
+    }
+
+    .burger-checkbox:checked + .burger-button span {
+        opacity: 0;
+    }
+    .burger-checkbox:checked ~ .header__menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 56px;
+        left: 0;
+        right: 0;
+        flex: 1 1 768px;
+        width: 100%;
+        height: 100vh;
+        z-index: 30 ;
+        background: url(/src/image/banner_bg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: $gradient;
+            opacity: $opacity;
+            z-index: 10;
+        }
+    }
+}

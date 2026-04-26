@@ -1,0 +1,46 @@
+@import "variables.scss";
+
+.futures {
+    background: $skyblue;
+    color: $white;
+    text-align: center;
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        column-gap: 1px;
+        background: $white;
+        @include mobile {
+            grid-template-columns: 1fr 1fr;
+            column-gap: 0;
+            row-gap: 1px;
+        }
+    }
+    &__item {
+        font-size: 24px;
+        padding: 74.5px 0;
+        font-weight: 500;
+        background: $skyblue;
+        @include tablet {
+            font-size: 18px;
+            padding: 45.445px 0;
+        }
+        @include mobile {
+            border: none;
+            grid-template-columns: 1fr 1fr;
+            padding: 23.505px 0;
+            &:last-child{
+                grid-column: span 2;
+            }
+        }
+        & span {
+            font-weight: 700;
+            font-size: 64px;
+            @include tablet {
+                font-size: 48px;
+            }
+            @include mobile {
+                font-size: 48px;
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@import "variables.scss";
+
+.partners {
+    background: $bg-grey;
+    &__wrapper{
+        display: grid;
+        grid-template-columns: repeat(6, 1f);
+    }
+}
+.partners__img {
+
+    & img{
+        @include image-cover;
+    }
+}

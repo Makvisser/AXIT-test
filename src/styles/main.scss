@@ -1,0 +1,81 @@
+@import "variables.scss";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: none;
+}
+body {
+    font-family: $main-font;
+    font-weight: 400;
+    font-size: 14px;
+}
+a {
+    text-decoration: none;
+    color: $white;
+}
+button{
+    cursor: pointer;
+}
+.wrapper-bg {
+    background: url(/src/image/banner_bg.png);
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $gradient;
+        opacity: $opacity;
+        z-index: 2;
+    }
+}
+.container {
+    max-width: 1202px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+    padding: 0 16px
+}
+.line {
+    background: $pink;
+    width: 170px;
+    height: 4px;
+    @include tablet {
+        width: 148px;
+    }
+    @include mobile {
+        width: 134px;
+    }
+}
+.title-wrapper {
+    color: $dark-grey;
+    text-align: center;
+}
+.accent-title {
+    font-family: $accent-font;
+    font-size: 30px;
+    line-height: 2.67;
+}
+.title {
+    font-weight: 900;
+    font-size: 36px;
+    text-transform: uppercase;
+    line-height: 2.2;
+    margin-bottom: 20px;
+}
+.line {
+    background: $pink;
+    width: 170px;
+    height: 4px;
+    margin: 0 auto;
+}
+

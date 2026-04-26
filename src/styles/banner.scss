@@ -1,0 +1,154 @@
+@import "variables.scss";
+
+.banner {
+    background: transparent;
+    color: $white;
+    text-align: center;
+    line-height: 1.25;
+    position: relative;
+    z-index: 2;
+    @include tablet {
+    }
+    @include mobile {
+    }
+
+    &__subtitle {
+        font-family: $accent-font;
+        font-size: 64px;
+        @include tablet {
+            font-size: 48px;
+        }
+        @include mobile {
+            font-size: 36px;
+        }
+    }
+    &__title {
+        font-family: $title-font;
+        font-weight: 700;
+        font-size: 144px;
+        text-transform: uppercase;
+        line-height: 1.2;
+        padding: 13px;
+        margin-bottom: 39px;
+        @include tablet {
+            font-size: 96px;
+            margin-bottom: 29.84px;
+        }
+        @include mobile {
+            font-size: 48px;
+            margin-bottom: 29.84px;
+        }
+    }
+    &__line {
+        background: $white;
+        margin: 0 auto 72px;
+        @include tablet {
+            margin: 0 auto 72px;
+        }
+        @include mobile {
+            margin: 0 auto 72px;
+        }
+    }
+    &__btn {
+        color: $white;
+        text-transform: uppercase;
+        background: transparent;
+        text-align: center;
+        font-weight: 700;
+        font-size: 24px;
+        border: 4px solid $white;
+        width: 370px;
+        height: 80px;
+        margin-bottom: 112px;
+        transition: all 0.2s ease;
+        letter-spacing: -0.7px;
+        @include tablet {
+            font-size: 18px;
+            width: 318px;
+            height: 54.25px;
+            margin-bottom: 78.89px;
+        }
+        @include mobile {
+            font-size: 18px;
+            width: 285px;
+            height: 54.25px;
+            margin-bottom: 53.75px;
+        }
+
+        &:hover {
+            background: $white;
+            color: $orange;
+        }
+        &:active {
+            background: $white;
+            color: $orange;
+            border-color: $orange;
+        }
+    }
+    &__sliders {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        color: $eggshell;
+        @include tablet {
+            gap: 20px;
+        }
+    }
+    &__slider {
+        display: flex;
+        flex-direction: column;
+        flex: 0 1 270px;
+        @include tablet {
+            flex: 0 1 233px;
+        }
+        @include mobile {
+            flex: 1 1 57px;
+        }
+        &-line {
+            width: 100%;
+            background: $eggshell;
+            height: 4px;
+            margin-bottom: 21px;
+            position: relative;
+            @include tablet {
+                margin-bottom: 17px;
+            }
+            @include mobile {
+                margin-bottom: 42px;
+            }
+            &-fill {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 4px;
+                background: $pink;
+                transition: width 0.3s ease;
+            }
+        }
+        &:hover .banner__slider-line-fill {
+            width: 100%;
+        }
+        &-text {
+            font-weight: 500;
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            text-align: left;
+            @include tablet {
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
+            @include mobile {
+                display: none;
+            }
+            & span {
+                font-weight: 700;
+                font-size: 36px;
+                @include tablet {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
