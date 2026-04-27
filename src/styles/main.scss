@@ -64,4 +64,18 @@ button{
     height: 4px;
     margin: 0 auto;
 }
-
+.title__desc{
+        color: $black;
+        font-size: 18px;
+        padding: 38px 0;
+        margin-bottom: 58px;
+        @include tablet {
+            font-size: 14px;
+            padding: 33.35px 0;
+            margin-bottom: 48.51px;
+        }
+        @include mobile {
+            padding: 38px 0;
+            margin-bottom: 17px;
+        }
+}

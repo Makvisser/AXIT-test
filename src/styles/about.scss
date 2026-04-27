@@ -9,21 +9,6 @@
     @include mobile {
         margin: 29px auto 58.99px;
     }
-    &__desc {
-        color: $black;
-        font-size: 18px;
-        padding: 38px 0;
-        margin-bottom: 58px;
-        @include tablet {
-            font-size: 14px;
-            padding: 33.35px 0;
-            margin-bottom: 48.51px;
-        }
-        @include mobile {
-            padding: 38px 0;
-            margin-bottom: 17px;
-        }
-    }
     &__team {
         display: flex;
         gap: 30px;
